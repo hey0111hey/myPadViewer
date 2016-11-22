@@ -1,0 +1,86 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <BODY topmargin="0" leftmargin="0" marginwidth="0" marginheight="0">
+    <title>ゲーム</title>
+    <script src = "main.js"></script>
+    <body>
+      <canvas id="maincanvas"></canvas>
+    </body>
+    <form>
+      <button type="button" onclick="set_color('R')" >
+        <img src="assets/R.gif" alt='blue button' height=50 width=50>
+      </button>
+      <button type="button" onclick="set_color('G')" >
+        <img src="assets/G.gif" alt='blue button' height=50 width=50>
+      </button>
+      <button type="button" onclick="set_color('B')" >
+        <img src="assets/B.gif" alt='blue button' height=50 width=50>
+      </button>
+      <button type="button" onclick="set_color('Y')" >
+        <img src="assets/Y.gif" alt='blue button' height=50 width=50>
+      </button>
+      <button type="button" onclick="set_color('P')" >
+        <img src="assets/P.gif" alt='blue button' height=50 width=50>
+      </button>
+      <button type="button" onclick="set_color('H')" >
+        <img src="assets/H.gif" alt='blue button' height=50 width=50>
+      </button>
+      <button type="button" onclick="set_color('J')" >
+        <img src="assets/J.gif" alt='blue button' height=50 width=50>
+      </button>
+      <button type="button" onclick="set_color('D')" >
+        <img src="assets/D.gif" alt='blue button' height=50 width=50>
+      </button>
+        <br>
+      <input type="button" value="ctw mode" onclick="set_mode('ctw')">
+      <input type="button" value="set orbs" onclick="set_mode('orbs')">
+      <input type="button" value="puzzle on" onclick="board.execute()">
+      <input type="button" value="くらえｯ！" onclick="unko_no_umi()">
+      <br>
+      <input type="button" value="step by step" onclick="stepbystep()">
+      <input type="button" value="step by step without filling" onclick="stepbystep_without_otikon()">
+      <br>
+      <input type="button" value="erace!" onclick="erace_button()">
+      <input type="button" value="fall!" onclick="board.falling()">
+      <input type="button" value="fill random!" onclick="board.fill_random(otirand)">
+      <br>
+    </form>
+    履歴機能 : 最新100件まで<br>
+    <form name="history_button">
+      <input type="button" value="<<" onclick="onHistoryButton(0)">
+      <input type="button" value="<" onclick="onHistoryButton(1)">
+      <input type="button" value=">" onclick="onHistoryButton(2)">
+      <input type="button" value=">>" onclick="onHistoryButton(3)">
+    </form>
+    オチコンボタン
+    <br>
+    <form name="oti">
+      <input id="Radio0" name="RadioGroup0" checked="checked" type="checkbox" onchange="onRadioButtonChange(0);" />
+      <label for="Radio0">火</label><br/>
+      <input id="Radio1" name="RadioGroup1" checked="checked" type="checkbox" onchange="onRadioButtonChange(1);" />
+      <label for="Radio1">木</label><br/>
+      <input id="Radio2" name="RadioGroup2" checked="checked" type="checkbox" onchange="onRadioButtonChange(2);" />
+      <label for="Radio2">水</label><br/>
+      <input id="Radio3" name="RadioGroup3" checked="checked" type="checkbox" onchange="onRadioButtonChange(3);" />
+      <label for="Radio3">光</label><br/>
+      <input id="Radio4" name="RadioGroup4" checked="checked" type="checkbox" onchange="onRadioButtonChange(4);" />
+      <label for="Radio4">闇</label><br/>
+      <input id="Radio5" name="RadioGroup5" checked="checked" type="checkbox" onchange="onRadioButtonChange(5);" />
+      <label for="Radio5">回</label><br/>
+      <input id="Radio6" name="RadioGroup6" checked="checked" type="checkbox" onchange="onRadioButtonChange(6);" />
+      <label for="Radio6">邪</label><br/>
+      <input id="Radio7" name="RadioGroup7" checked="checked" type="checkbox" onchange="onRadioButtonChange(7);" />
+      <label for="Radio7">糞</label><br/>
+    </form>
+      <input id="kepri" name="kepri" type="checkbox" onchange="change_mode_Kepri()" />
+      <label for="kepri">ケプリモード</label><br/>
+    <form name="dict">
+      縦: <input type="text" name="height"  value="5"> <br>
+      横: <input type="text" name="width" value="6"> <br>
+
+      <input type="button" value="変更" onclick="newBoard()">
+    </form>
+
+</html>
+
